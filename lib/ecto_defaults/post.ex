@@ -1,16 +1,14 @@
-defmodule EctoDefaults.User do
+defmodule EctoDefaults.Post do
   use Ecto.Model
 
   import Ecto.Changeset
   import Ecto.Query, only: [from: 1, from: 2]
 
-  @primary_key {:id, :binary_id, autogenerate: false}
-
-  schema "users" do
-    field :name, :string
+  schema "posts" do
+    field :text, :string
   end
 
-  @required_fields ~w()
+  @required_fields ~w(text)
   @optional_fields ~w()
 
   @doc """
